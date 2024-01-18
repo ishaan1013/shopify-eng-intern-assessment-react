@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react"
+import StopWatch, { getUnits } from "./StopWatch"
+import StopWatchButton from "./StopWatchButton"
+import StopWatchLaps from "./StopWatchLaps"
 
 export default function App() {
   const [time, setTime] = useState(0)
@@ -7,7 +10,7 @@ export default function App() {
   const [laps, setLaps] = useState([])
   const [lastLap, setLastLap] = useState(0)
 
-  // const timeUnits = getUnits(time)
+  const timeUnits = getUnits(time)
 
   useEffect(() => {
     let interval: NodeJS.Timer
@@ -39,7 +42,29 @@ export default function App() {
 
   return (
     <main>
-      <div className="container"></div>
+      <div className="container">
+        <StopWatch {...timeUnits} />
+
+        <div className="stopwatch-buttons">
+          {counting ? (
+            <>
+              <StopWatchButton onClick={lap} variant="lap" />
+              <StopWatchButton onClick={stop} variant="stop" />
+            </>
+          ) : (
+            <>
+              <StopWatchButton
+                variant="reset"
+                disabled={time === 0}
+                onClick={reset}
+              />
+              <StopWatchButton onClick={start} variant="start" />
+            </>
+          )}
+        </div>
+
+        <StopWatchLaps currentLap={time - lastLap} laps={laps} time={time} />
+      </div>
     </main>
   )
 }
