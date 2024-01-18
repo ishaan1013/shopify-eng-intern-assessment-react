@@ -21,6 +21,23 @@ describe("StopWatch component", () => {
     expect(timeElement).toBeInTheDocument()
   })
 
+  test("resets correctly", () => {
+    const { getByText } = render(<App />)
+    const startButton = getByText("Start")
+    fireEvent.click(startButton)
+
+    setTimeout(() => {
+      const stopButton = getByText("Stop")
+      fireEvent.click(stopButton)
+
+      const resetButton = getByText("Reset")
+      fireEvent.click(resetButton)
+
+      const timeElement = screen.getByText("00:00.00")
+      expect(timeElement).toBeInTheDocument()
+    }, 100)
+  })
+
   test("records laps correctly", () => {
     const { getByText } = render(<App />)
     const startButton = getByText("Start")
