@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from "react"
 
 export default function App() {
-    return(
-        <div></div>
-    )
+  return (
+    <main>
+      <div className="container"></div>
+    </main>
+  )
 }
