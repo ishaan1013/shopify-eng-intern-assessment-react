@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
 
+/* Document styles */
 html, body {
   margin: 0;
   background-color: #0d0d0d;
@@ -16,6 +17,7 @@ main {
   justify-content: center;
 }
 
+/* Fonts */
 * {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
@@ -36,9 +38,10 @@ main {
   padding: 0 2rem;
 }
 
+/* Main stopwatch */
+
 .stopwatch-time {
   font-size: 4rem;
-  text-align: right;
   padding-top: 6rem;
   margin-bottom: 3rem;
 }
@@ -50,6 +53,8 @@ main {
   width: 100%;
   margin-bottom: 2rem;
 }
+
+/* Buttons */
 
 .stopwatch-buttons button {
   padding: 1rem 2rem;
@@ -98,6 +103,8 @@ main {
 .button-red:hover {
   background-color: #ef444411;
 }
+
+/* Laps */
 
 .laps-container {
   display: flex;

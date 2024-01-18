@@ -1,5 +1,7 @@
 import React from "react"
 
+// React component with button variants used to control the stopwatch & laps.
+// Takes button variant and attributes as props.
 export default function StopWatchButton({
   variant,
   onClick,
@@ -9,6 +11,7 @@ export default function StopWatchButton({
   onClick: () => void
   disabled?: boolean
 }) {
+  // Switch statement to determine which button variant to render.
   switch (variant) {
     case "start":
       return (
@@ -32,6 +35,7 @@ export default function StopWatchButton({
       return (
         <button
           className="button-standard"
+          // Disable the reset button if the stopwatch is in the initial state.
           disabled={disabled}
           onClick={onClick}
         >
