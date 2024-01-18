@@ -12,12 +12,11 @@ export default function StopWatch({
   ms: number
 }) {
   // Format the time units to display as a string.
-  return (
-    <div className="stopwatch-time mono">
-      {m.toString().padStart(2, "0")}:{s.toString().padStart(2, "0")}.
-      {ms.toString().padStart(2, "0")}
-    </div>
-  )
+  const timeString = `${m.toString().padStart(2, "0")}:${s
+    .toString()
+    .padStart(2, "0")}.${ms.toString().padStart(2, "0")}`
+
+  return <div className="stopwatch-time mono">{timeString}</div>
 }
 
 // Helper function to convert time in milliseconds to time units.
