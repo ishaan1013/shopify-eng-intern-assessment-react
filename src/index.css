@@ -42,3 +42,59 @@ main {
   padding-top: 6rem;
   margin-bottom: 3rem;
 }
+
+.stopwatch-buttons {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.stopwatch-buttons button {
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+
+  cursor: pointer;
+  border: none;
+}
+
+.button-standard {
+  background-color: #222;
+  color: #999;
+  margin-right: 1rem;
+}
+
+.button-standard:hover {
+  background-color: #1c1c1c;
+}
+
+.button-standard:disabled {
+  color: #555;
+  background-color: #1c1c1c;
+  cursor: not-allowed;
+}
+
+.button-standard:disabled:hover {
+  background-color: #1c1c1c;
+}
+
+.button-green {
+  background-color: #22c55e22;
+  color: #22c55e;
+}
+
+.button-green:hover {
+  background-color: #22c55e11;
+}
+
+.button-red {
+  background-color: #ef444422;
+  color: #ef4444
+}
+
+.button-red:hover {
+  background-color: #ef444411;
+}
