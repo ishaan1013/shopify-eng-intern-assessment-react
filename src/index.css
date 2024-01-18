@@ -98,3 +98,27 @@ main {
 .button-red:hover {
   background-color: #ef444411;
 }
+
+.laps-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  width: 100%;
+  flex-grow: 1;
+  margin-bottom: 2rem;
+  overflow-y: auto;
+}
+
+.lap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
